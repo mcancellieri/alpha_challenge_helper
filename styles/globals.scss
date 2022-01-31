@@ -1,0 +1,181 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@import 'variables';
+
+body {
+  font-family: $font-sans-serif;
+  margin: 0px;
+  background-color: $primary;
+  color: white;
+  line-height: 36px;
+  font-size: 24px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-family: $font-serif;
+  font-size: 4rem;
+  line-height: 5rem;
+}
+
+h1 {
+  font-size: 7rem;
+  line-height: 8rem;
+  margin-top: 0px;
+  font-family: $font-sans-serif;
+  @media only screen and (max-width: 1000px) {
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+}
+
+a {
+  text-decoration: underline;
+  font-weight: bold;
+  color: $tertiary
+}
+
+
+a:hover {
+  color: inherit;
+}
+
+a:visited {
+  color: $tertiary;
+}
+
+blockquote {
+  font-style: italic;
+}
+
+#skiptocontent {
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  top: -10px;
+}
+
+#main {
+  padding: 50px $padding-main;
+  @media only screen and (max-width: 600px) {
+    width: 600px;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+
+
+.centered {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+
+.button {
+  background-color: $secondary;
+  width: 50%;
+  margin: auto;
+  font-size: 2rem;
+  padding: $padding-small;
+  text-decoration: none;
+  font-family: $font-sans-serif;
+  border-bottom: 5px solid $tertiary;
+  border-left: 5px solid $tertiary;
+}
+
+.bar {
+  text-align: center;
+  width: 50%;
+  margin: 50px auto;
+  @media only screen and (max-width: 1000px) {
+    margin: 0;
+    width: 100%;
+  }
+
+  form {
+    display: flex;
+  }
+
+  input[type="password"], input[type="text"] {
+    font-size: 3rem;
+    clear: both;
+    height: 3.5rem;
+    border-width: 0;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+    @media only screen and (max-width: 1000px) {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  input[type="submit"] {
+    background-color: $secondary;
+    font-size: 2rem;
+    text-decoration: none;
+    font-family: $font-sans-serif;
+    color: white;
+    height: 3.5rem;
+    border: 3px solid white;
+
+  }
+}
+
+
+.action-object {
+  text-align: center;
+  width: 50%;
+  height: 30vw;
+  margin: 50px auto 0px;
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 1000px) {
+    width: 100%;
+    height: 100%;
+  }
+
+  iframe {
+    width: 100%;
+    height: 80%;
+  }
+}
+
+
+blockquote {
+  font-family: $font-serif;
+}
+
+blockquote::before {
+  font-family: $font-serif;
+  font-size: 5rem;
+  z-index: -1000;
+  position: absolute;
+  opacity: .5;
+}
+
+#main {
+  text-align: center;
+}
+
+#highlight {
+  color: $tertiary;
+}
