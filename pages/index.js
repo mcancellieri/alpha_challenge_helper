@@ -44,14 +44,13 @@ export const getRandomWordFromList = function (list){
 
 export async function getStaticProps() {
 
-    const allNouns = await fetch('http://localhost:3000/nounlist.csv')
+    const allNouns = await fetch("https://raw.githubusercontent.com/mcancellieri/alpha_challenge_helper/main/public/nounlist.csv")
         .then(function (response) {
             return response.text()
         })
     return {props: {allNouns: allNouns}}
 }
 
-export const server = dev ? 'http://localhost:3000' : 'https://your_deployment.server.com';
 export default function Home(allNouns) {
     let chosenWords = []
     chosenWords = getWords(allNouns.allNouns);

@@ -51,7 +51,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
     const { letter } = params;
     console.log(letter)
-    const allNouns = await fetch('http://localhost:3000/nounlist.csv')
+    const allNouns = await fetch("https://raw.githubusercontent.com/mcancellieri/alpha_challenge_helper/main/public/nounlist.csv")
         .then(function (response) {
             return response.text()
         })

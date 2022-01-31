@@ -35,12 +35,9 @@ export const getRandomWordFromList = function (list) {
     console.log("theWord is: " + theLastWord);
     return theLastWord;
 }
-const dev = process.env.NODE_ENV !== 'production';
-export const server = dev ? 'http://localhost:3000' : 'https://your_deployment.server.com';
-
 export async function getStaticProps() {
 
-    const allNouns = await fetch(server + '/nounlist.csv')
+    const allNouns = await fetch("https://raw.githubusercontent.com/mcancellieri/alpha_challenge_helper/main/public/nounlist.csv")
         .then(function (response) {
             return response.text()
         })
