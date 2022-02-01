@@ -14,7 +14,7 @@ export const getTodayWord = function (allNounsText) {
     let currentLetterList = [];
     let wordList = [];
     let alphabet = "abcdefghijklmnopqrstuvwxyz";
-    let todayLetter = alphabet[new Date().getDate() % 26];
+    let todayLetter = alphabet[new Date().getDate() % 26 -1];
 
     allNouns.forEach((value) => {
         if (value === "") {
